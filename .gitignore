@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DatingApp.API/bin/Debug/netcoreapp2.2
+/DatingApp.API/obj
