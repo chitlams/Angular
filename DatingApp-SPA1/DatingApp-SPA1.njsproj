@@ -4,6 +4,9 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>DatingApp-SPA1</Name>
     <RootNamespace>DatingApp-SPA1</RootNamespace>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -42,8 +45,12 @@
     <Content Include="src\app\home\home.component.html" />
     <Content Include="src\app\lists\lists.component.css" />
     <Content Include="src\app\lists\lists.component.html" />
-    <Content Include="src\app\member-list\member-list.component.css" />
-    <Content Include="src\app\member-list\member-list.component.html" />
+    <Content Include="src\app\members\member-card\member-card.component.css" />
+    <Content Include="src\app\members\member-card\member-card.component.html" />
+    <Content Include="src\app\members\member-detail\member-detail.component.css" />
+    <Content Include="src\app\members\member-detail\member-detail.component.html" />
+    <Content Include="src\app\members\member-list\member-list.component.css" />
+    <Content Include="src\app\members\member-list\member-list.component.html" />
     <Content Include="src\app\messages\messages.component.css" />
     <Content Include="src\app\messages\messages.component.html" />
     <Content Include="src\app\nav\nav.component.css" />
@@ -68,9 +75,14 @@
     <Folder Include="src\app\" />
     <Folder Include="src\app\home\" />
     <Folder Include="src\app\lists\" />
-    <Folder Include="src\app\member-list\" />
+    <Folder Include="src\app\members\member-card\" />
+    <Folder Include="src\app\members\member-detail\" />
+    <Folder Include="src\app\members\member-list\" />
     <Folder Include="src\app\messages\" />
     <Folder Include="src\app\nav\" />
+    <Folder Include="src\app\members\" />
+    <Folder Include="src\app\_resolvers\" />
+    <Folder Include="src\app\_models\" />
     <Folder Include="src\app\register\" />
     <Folder Include="src\app\_gaurds\" />
     <Folder Include="src\app\_services\" />
@@ -88,8 +100,12 @@
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\lists\lists.component.spec.ts" />
     <TypeScriptCompile Include="src\app\lists\lists.component.ts" />
-    <TypeScriptCompile Include="src\app\member-list\member-list.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\member-list\member-list.component.ts" />
+    <TypeScriptCompile Include="src\app\members\member-card\member-card.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\members\member-card\member-card.component.ts" />
+    <TypeScriptCompile Include="src\app\members\member-detail\member-detail.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\members\member-detail\member-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\members\member-list\member-list.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\members\member-list\member-list.component.ts" />
     <TypeScriptCompile Include="src\app\messages\messages.component.spec.ts" />
     <TypeScriptCompile Include="src\app\messages\messages.component.ts" />
     <TypeScriptCompile Include="src\app\nav\nav.component.spec.ts" />
@@ -98,11 +114,23 @@
     <TypeScriptCompile Include="src\app\register\register.component.ts" />
     <TypeScriptCompile Include="src\app\routs.ts" />
     <TypeScriptCompile Include="src\app\_gaurds\auth.gaurd.ts" />
+    <TypeScriptCompile Include="src\app\_models\Photo.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\_models\user.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\_resolvers\member-list.resolver.ts" />
+    <TypeScriptCompile Include="src\app\_resolvers\member-detail.resolver.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\_services\alertify.service.spec.ts" />
     <TypeScriptCompile Include="src\app\_services\alertify.service.ts" />
     <TypeScriptCompile Include="src\app\_services\auth.service.spec.ts" />
     <TypeScriptCompile Include="src\app\_services\auth.service.ts" />
     <TypeScriptCompile Include="src\app\_services\error.interceptor.ts" />
+    <TypeScriptCompile Include="src\app\_services\user.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\_services\user.service.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
